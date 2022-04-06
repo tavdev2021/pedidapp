@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Iniciar Sesion</string>
+    <string name="description">Ingresa con tu correo y contraseña</string>
+    <string name="email">Correo Electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="btn_login">Iniciar Sesion</string>
+    <string name="register_here">Registrate aqui</string>
+    <string name="version">Version 1.0</string>
+    <string name="delivery_app">Delivery App</string>
+    <string name="register">Registrarse</string>
+    <string name="complete_data">Completa los datos</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellidos</string>
+    <string name="email_register">Correo Electronico</string>
+    <string name="password_register">Password</string>
+    <string name="phone_register">Telefono</string>
+    <string name="confirm_password">Confirmar Password</string>
+    <string name="btn_register">Registrar</string>
+    <string name="back_to_login">Volver al login</string>
+</resources>
