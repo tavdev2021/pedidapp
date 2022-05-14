@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -31,18 +30,19 @@
 
         <EditText
             android:id="@+id/edtnamegister"
-            android:drawableStart="@drawable/ic_register_person"
-            android:drawablePadding="10dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/name"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="40dp"
-            android:inputType="text"
-            android:textSize="15sp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edittext_custom"
+            android:drawableStart="@drawable/ic_register_person"
+            android:drawablePadding="10dp"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom" />
+            android:textSize="15sp"
+            />
 
         <EditText
             android:id="@+id/edtlastnameregister"
@@ -54,10 +54,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:inputType="text"
+            android:inputType="textCapWords"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom" />
+            android:background="@drawable/edittext_custom"
+             />
 
         <EditText
             android:id="@+id/edtemailregister"
@@ -72,7 +73,8 @@
             android:inputType="textEmailAddress"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom" />
+            android:background="@drawable/edittext_custom"
+             />
 
         <EditText
             android:id="@+id/edtphoneregister"
@@ -88,7 +90,8 @@
             android:inputType="phone"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom" />
+            android:background="@drawable/edittext_custom"
+            />
 
         <EditText
             android:id="@+id/edtpasswordregister"
@@ -103,7 +106,8 @@
             android:inputType="textPassword"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom" />
+            android:background="@drawable/edittext_custom"
+            />
 
         <EditText
             android:id="@+id/edtconfirmpassword"
@@ -118,7 +122,8 @@
             android:inputType="textPassword"
             android:textSize="15sp"
             android:padding="15dp"
-            android:background="@drawable/edittext_custom" />
+            android:background="@drawable/edittext_custom"
+            />
 
     </LinearLayout>
 
@@ -145,7 +150,8 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_arrow_back"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:layout_width="wrap_content"

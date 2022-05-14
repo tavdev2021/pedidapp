@@ -18,4 +18,6 @@
     <string name="confirm_password">Confirmar Password</string>
     <string name="btn_register">Registrar</string>
     <string name="back_to_login">Volver al login</string>
+    <string name="todo">TODO</string>
+    <string name="logout">Cerrar Sesion</string>
 </resources>

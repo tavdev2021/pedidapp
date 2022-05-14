@@ -6,10 +6,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
+import com.google.gson.Gson
+import com.tavdev2022.pedidapp.activities.client.home.ClientHomeActivity
 import com.tavdev2022.pedidapp.databinding.ActivityRegisterBinding
 import com.tavdev2022.pedidapp.models.ResponseHttp
 import com.tavdev2022.pedidapp.models.User
 import com.tavdev2022.pedidapp.providers.UsersProvider
+import com.tavdev2022.pedidapp.utils.SharedPref
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,7 +20,7 @@ import retrofit2.Response
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
-    var userProvider = UsersProvider()
+    private var userProvider = UsersProvider()
 
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,20 +62,25 @@ class RegisterActivity : AppCompatActivity() {
                     call: Call<ResponseHttp>,
                     response: Response<ResponseHttp>
                 ) {
-                    Toast.makeText(this@RegisterActivity, response.body()?.message, Toast.LENGTH_LONG).show()
 
-                    binding.edtnamegister.text = null
-                    binding.edtlastnameregister.text = null
-                    binding.edtemailregister.text = null
-                    binding.edtphoneregister.text = null
-                    binding.edtpasswordregister.text = null
-                    binding.edtconfirmpassword.text = null
+                    if(response.body()?.isSuccess == true) {
+                        saveUserInSession(response.body()?.data.toString())
+                        goToClientHome()
 
-                    Log.d("RegisterActivity","Response: $response")
-                    Log.d("RegisterActivity","Body: ${response.body()}")
+                        Toast.makeText(this@RegisterActivity, response.body()?.message, Toast.LENGTH_LONG).show()
+
+                        Log.d("RegisterActivity","Response: $response")
+                        Log.d("RegisterActivity","Body: ${response.body()}")
+                    }
+                    else{
+                        Toast.makeText(this@RegisterActivity, "Hubo un error al registrar el usuario", Toast.LENGTH_LONG).show()
+                    }
+
+
                 }
 
                 override fun onFailure(call: Call<ResponseHttp>, t: Throwable) {
+
                     Toast.makeText(this@RegisterActivity, "Se produjo un error ${t.message}", Toast.LENGTH_LONG).show()
 
                     Log.d("RegisterActivity","Se produjo un error ${t.message}")
@@ -81,6 +89,20 @@ class RegisterActivity : AppCompatActivity() {
             })
         }
 
+    }
+
+    private fun goToClientHome() {
+        val i = Intent(this, ClientHomeActivity::class.java)
+        startActivity(i)
+        finish()
+    }
+
+    private fun saveUserInSession(data: String) {
+
+        val sharedPref = SharedPref(this)
+        val gson = Gson()
+        val user = gson.fromJson(data, User::class.java)
+        sharedPref.save("user", user)
     }
 
     private fun String.isEmailValid(): Boolean {
