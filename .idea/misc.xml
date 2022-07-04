@@ -6,9 +6,13 @@
         <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/drawable/edittext_custom.xml" value="0.167" />
         <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/drawable/rounded_button.xml" value="0.167" />
         <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/activity_client_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/activity_delivery_home.xml" value="0.2" />
         <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/activity_restaurant_home.xml" value="0.2" />
+        <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/activity_select_roles.xml" value="0.2" />
         <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Octavio Bustos Solis/AndroidStudioProjects/pedidapp/app/src/main/res/layout/cardview_roles.xml" value="0.2" />
       </map>
     </option>
   </component>

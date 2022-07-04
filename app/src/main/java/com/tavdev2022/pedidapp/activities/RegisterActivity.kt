@@ -93,8 +93,8 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun goToClientHome() {
         val i = Intent(this, ClientHomeActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK //Eliminar el historial de pantallas
         startActivity(i)
-        finish()
     }
 
     private fun saveUserInSession(data: String) {
@@ -164,13 +164,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun goToLogin() {
         val i = Intent(this, MainActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK //Eliminar el historial de pantallas
         startActivity(i)
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val i = Intent(this, MainActivity::class.java)
-        startActivity(i)
-        finish()
     }
 }
