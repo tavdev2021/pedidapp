@@ -1,5 +1,6 @@
 package com.tavdev2022.pedidapp.models
 
+import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 
 class User (
@@ -16,5 +17,9 @@ class User (
         ){
     override fun toString(): String {
         return "User(id=$id, name='$name', lastname='$lastname', email='$email', phone='$phone', password='$password', image=$image, sessionToken=$sessionToken, isAvailable=$isAvailable, roles=$roles)"
+    }
+
+    fun toJason(): String {
+        return Gson().toJson(this)
     }
 }
