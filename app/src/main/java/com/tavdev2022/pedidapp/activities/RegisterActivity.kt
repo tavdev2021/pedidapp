@@ -7,7 +7,6 @@ import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
 import com.google.gson.Gson
-import com.tavdev2022.pedidapp.activities.client.home.ClientHomeActivity
 import com.tavdev2022.pedidapp.databinding.ActivityRegisterBinding
 import com.tavdev2022.pedidapp.models.ResponseHttp
 import com.tavdev2022.pedidapp.models.User

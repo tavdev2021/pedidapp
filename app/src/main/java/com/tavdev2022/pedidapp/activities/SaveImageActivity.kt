@@ -97,16 +97,19 @@ class SaveImageActivity : AppCompatActivity() {
             val resultCode = result.resultCode
             val data = result.data
 
-            if (resultCode == Activity.RESULT_OK) {
-                val fileUri = data?.data
-                imageFile = File(fileUri?.path) //Ruta del archivo que vamos a guardar en el Storage
-                binding.circleImageUser.setImageURI(fileUri)
-            }
-            else if (resultCode == ImagePicker.RESULT_ERROR) {
-                Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
-            }
-            else {
-                Toast.makeText(this, "La tarea se cancelo", Toast.LENGTH_SHORT).show()
+            when (resultCode) {
+                Activity.RESULT_OK -> {
+                    val fileUri = data?.data
+                    imageFile =
+                        fileUri?.path?.let { File(it) } //Ruta del archivo que vamos a guardar en el Storage
+                    binding.circleImageUser.setImageURI(fileUri)
+                }
+                ImagePicker.RESULT_ERROR -> {
+                    Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    Toast.makeText(this, "La tarea se cancelo", Toast.LENGTH_SHORT).show()
+                }
             }
     }
     

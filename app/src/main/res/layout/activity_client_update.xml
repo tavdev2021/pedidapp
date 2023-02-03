@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.client.update.ClientUpdateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvUpdate"
+            android:fontFamily="@font/indigo_daisy"
+            android:textSize="40sp"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="25dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageUser"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/user"
+            app:civ_border_color="@color/gray"
+            app:civ_border_width="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:civ_circle_background_color="@color/gray_light"/>
+
+
+        <EditText
+            android:id="@+id/edtnameupdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edittext_custom"
+            android:drawableStart="@drawable/ic_register_person"
+            android:drawablePadding="10dp"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
+            android:padding="15dp"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/edtlastnameupdate"
+            android:drawableStart="@drawable/ic_register_person"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/last_name"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:inputType="textCapWords"
+            android:textSize="15sp"
+            android:padding="15dp"
+            android:background="@drawable/edittext_custom"
+            />
+
+        <EditText
+            android:id="@+id/edtphoneupdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/ic_register_phone"
+            android:drawablePadding="10dp"
+            android:maxLength="10"
+            android:hint="@string/phone_register"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:inputType="phone"
+            android:textSize="15sp"
+            android:padding="15dp"
+            android:background="@drawable/edittext_custom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_update"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/green"
+            android:background="@drawable/rounded_button"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

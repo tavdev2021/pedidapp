@@ -4,7 +4,7 @@ import com.tavdev2022.pedidapp.routes.UsersRoutes
 
 class ApiRoutes {
 
-    private val API_URL = "http://192.168.12.243:3000/api/"
+    private val API_URL = "http://192.168.43.215:3000/api/"
     private val retrofit = RetrofitClient()
 
     fun getUsersRoutes(): UsersRoutes {

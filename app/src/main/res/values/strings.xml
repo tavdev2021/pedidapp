@@ -22,4 +22,10 @@
     <string name="logout">Cerrar Sesion</string>
     <string name="btn_confirmar">Confirmar</string>
     <string name="btn_saltar_paso">Saltar este paso</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_select_rol">Seleccionar Rol</string>
+    <string name="btn_edit_profile">Editar Perfil</string>
+    <string name="btn_update">Actualizar</string>
+    <string name="tvUpdate">Actualizar Datos de Usuario</string>
 </resources>

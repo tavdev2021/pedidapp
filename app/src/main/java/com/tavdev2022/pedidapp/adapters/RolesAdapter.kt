@@ -2,6 +2,8 @@ package com.tavdev2022.pedidapp.adapters
 
 import android.app.Activity
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,6 +51,7 @@ class RolesAdapter(val context: Activity, private val roles: ArrayList<Rol>): Re
                 sharedPref.save("rol", "RESTAURANTE")
 
                 val i = Intent(context, RestaurantHomeActivity::class.java)
+                i.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK //Eliminar el historial de pantallas
                 context.startActivity(i)
             }
             "CLIENTE" -> {
@@ -56,6 +59,7 @@ class RolesAdapter(val context: Activity, private val roles: ArrayList<Rol>): Re
                 sharedPref.save("rol", "CLIENTE")
 
                 val i = Intent(context, ClientHomeActivity::class.java)
+                i.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK //Eliminar el historial de pantallas
                 context.startActivity(i)
             }
             "REPARTIDOR" -> {
@@ -63,6 +67,7 @@ class RolesAdapter(val context: Activity, private val roles: ArrayList<Rol>): Re
                 sharedPref.save("rol", "REPARTIDOR")
 
                 val i = Intent(context, DeliveryHomeActivity::class.java)
+                i.flags = FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK //Eliminar el historial de pantallas
                 context.startActivity(i)
             }
         }
